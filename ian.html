@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script>
+$(document).ready(function(){
+  $("input[type='submit']").click(function(e){
+    e.preventDefault();
+    var name = $("input[name='first_name']").val()+ "" + ("input[name='last_name']") + "" + ("input[name='email']").val();
+    var Password = $("input[type='Password']").val();
+    var games = $("select").val();
+    $("result").html(name + " is a" + Password + " from " + "" + "");
+  });
+});
+</script>
+ <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="contact-tittle">
+	<h1>Retrieve Acount</h1>
+
+	</div>
+
+	<div class="contact-form">
+		<form id="contact-form" method="post" target="_blank" action="">
+			<input type="text" name="First_name" class="form-control" placeholder="First name" required><br />
+
+			<input type="text" name="Last_name" class="form-control" placeholder="Last name" required><br />
+
+			<input type="Password" name="Password" class="form-control" placeholder="Your Password" required=""><br />
+
+			<input type="Password" name="Confirmed Password" class="form-control" placeholder="Confirmed Password" required=""><br />
+
+			<input type="text" name="Email" class="form-control" placeholder="Your email" required=""><br />
+
+			<input type="submit" class="form-control submit" value="submit">
+	</form>
+</div>
+</body>
+</html>
